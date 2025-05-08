@@ -1,4 +1,4 @@
-# Fraud Detection Using XGBoost
+# Fraud Detection Using Logistic Regression and XGBoost
 
 ## Overview
 Built an ML model to detect fraudulent credit card transactions using XGBoost, SHAP for explainability, and advanced metrics for evaluation.
