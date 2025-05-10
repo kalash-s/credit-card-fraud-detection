@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        .data {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .data th, .data td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+        .data th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload CSV to Detect Fraud</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required />
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if message %}
+        <h2>{{ message }}</h2>
+    {% endif %}
+
+    {% if tables %}
+        <h2>Fraudulent Transactions:</h2>
+        {{ tables[0]|safe }}
+    {% endif %}
+</body>
+</html>
